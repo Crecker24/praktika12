@@ -1,0 +1,21 @@
+<svg width="175" height="147" viewBox="0 0 175 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.4167 6.25H14.5833C11.3617 6.25 8.75 8.11548 8.75 10.4167V39.5833C8.75 41.8845 11.3617 43.75 14.5833 43.75H55.4167C58.6383 43.75 61.25 41.8845 61.25 39.5833V10.4167C61.25 8.11548 58.6383 6.25 55.4167 6.25Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160.417 103.25H119.583C116.362 103.25 113.75 105.115 113.75 107.417V136.583C113.75 138.885 116.362 140.75 119.583 140.75H160.417C163.638 140.75 166.25 138.885 166.25 136.583V107.417C166.25 105.115 163.638 103.25 160.417 103.25Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M108.417 53.25H67.5833C64.3617 53.25 61.75 55.1155 61.75 57.4167V86.5833C61.75 88.8845 64.3617 90.75 67.5833 90.75H108.417C111.638 90.75 114.25 88.8845 114.25 86.5833V57.4167C114.25 55.1155 111.638 53.25 108.417 53.25Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<g clip-path="url(#clip0_19_14)">
+<path d="M135.25 86.5H152.75M144 92.625L152.75 86.5L144 80.375" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M80 15.25V32.75M74.1667 24L80 32.75L85.8334 24" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M98 103.25V120.75M92.1667 112L98 120.75L103.833 112" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<g clip-path="url(#clip1_19_14)">
+<path d="M33 51.375V76.1667M33 117.875L33 142.667M33 113.667C29.3181 113.667 26.3334 106.205 26.3334 97C26.3334 87.7953 29.3181 80.3333 33 80.3333C36.6819 80.3333 39.6667 87.7953 39.6667 97C39.6667 106.205 36.6819 113.667 33 113.667Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_19_14">
+<rect width="21" height="30" fill="white" transform="matrix(0 -1 1 0 129 97)"/>
+</clipPath>
+<clipPath id="clip1_19_14">
+<rect width="100" height="40" fill="white" transform="matrix(0 1 -1 0 53 47)"/>
+</clipPath>
+</defs>
+</svg>
