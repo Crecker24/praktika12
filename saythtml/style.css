@@ -220,7 +220,7 @@ body {
 
 .bottom-line {
 	position: absolute;
-	top: 36.9%;
+	top: 47%;
 	opacity: 0.4;
 }
 
@@ -229,6 +229,10 @@ body {
 	top: 0%;
 	right: 0%;
 	opacity: 0.4;
+}
+
+.consultation {
+	margin-bottom: 120px;
 }
 
 .consultation .container {
@@ -280,4 +284,37 @@ body {
 	padding: 20px 50px;
 	border: 2px solid #ffffff;
 	border-radius: 30px;
+}
+
+.portfolio {
+	color: #041C3B;
+}
+
+.portfolio .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio-title {
+	font-size: calc(var(--main-px) * 8);
+	margin-bottom: 30px;
+	border-bottom: 2px solid #0B2140;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.portfolio-list {
+	display: flex;
+	gap: 200px;
+}
+
+.registration-form {
+	padding: 150px 300px;
+}
+
+.login-block {
+	background-color: rgba(11, 33, 64, 0.8);
 }
