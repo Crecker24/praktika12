@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <section class="login">
+            <img src="./img/Group 2.svg" alt="" class="top-line">
+            <div class="container">
+                <div class="login-block">
+                    <form action="" class="registration-form" method ="post">
+                        <h4 class="registration-title">Регистрация</h4>
+
+                        <div class="registration-form-group">
+                            <label for="phone" class="registration-form-label">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" class="registration-form-input" placeholder="Ваш номер телефона" required>
+                        </div>
+
+                        <div class="registration-form-group">
+                            <label for="password" class="registration-form-label">Пароль</label>
+                            <input type="password" id="password" name="password" class="registration-form-input" placeholder="Ваш пароль" required>
+                        </div>
+
+                        <div class="checkbox-wrapper">
+                          <input class="custom-checkbox" type="checkbox" id="agreement">
+                          <label for="agreement">Даю согласие на обработку персональных данных</label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                    </form>
+                    <div class="wrapper">
+                        <div></div>
+                        <a href="authorizathion.php">Авторизация</a>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <img class="bottom-line" src="./img/Group 1.svg" alt="">
+        </section>
+</body>
+</html>
