@@ -103,7 +103,7 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 auto;
+	padding: 0;
 	max-width: 1600px;
 }
 
@@ -269,7 +269,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-
 }
 
 .consultation-form-input {
@@ -306,15 +305,201 @@ body {
 	padding-bottom: 10px;
 }
 
-.portfolio-list {
+.tabs {
 	display: flex;
 	gap: 200px;
+	justify-content: center;
+	margin-bottom: 30px;
 }
 
+.tab-btn {
+	padding: 5px 10px;
+}
+
+.tab-btn.active {
+	color: blue;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+}
+
+.slider-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+	gap: 20px;
+}
+
+.slider-track {
+	width: 70%;
+	overflow: hidden;
+	border-radius: 30px;
+	background-color: rgba(11, 33, 64, 0.8);
+	color: #F8FAFC;
+}
+
+.slide img {
+	width: 50%;
+	aspect-ratio: 1;
+}
+
+.slide {
+	display: none;
+	padding: 40px;
+}
+
+.slide.active {
+	display: block;
+}
+
+.slide-content {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+.slide-text {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.arrow-btn {
+	background: none;
+	border: none;
+	font-size: 100px;
+}
+
+
+
 .registration-form {
-	padding: 150px 300px;
+	padding: 100px 100px;
 }
 
 .login-block {
 	background-color: rgba(11, 33, 64, 0.8);
+}
+
+.login .container {
+	margin-top: 100px;
+}
+
+.login-block {
+	border-radius: 30px;
+}
+
+.login .bottom-line {
+	top: 36%;
+}
+
+.dots-container {
+	display: flex;
+	gap: 20px;
+}
+
+.dot {
+	width: 25px;
+	aspect-ratio: 1;
+	background-color: #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.dot.active {
+	background-color: blue;
+	border: 3px solid red;
+}
+
+.registration-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+
+.registration-title {
+	font-size: 48px;
+}
+
+.registration-form-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.registration-form-input {
+	width: 465px;
+	height: 50px;
+	background-color: #F8FAFC;
+	border-radius: 8px;
+	color: #000;
+}
+
+.checkbox-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+#agreement {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 30px;
+	aspect-ratio: 1;
+	border-radius: 10px;
+	border: 2px solid white;
+	cursor: pointer;
+}
+
+.checkbox-wrapper label {
+	font-size: 18px;
+}
+
+
+.custom-checkbox::before {
+  content: "";
+  width: 20px;
+  height: 15px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+
+  transform: rotate(-45deg) translate(0px, 0px);
+  display: none;
+}
+
+.custom-checkbox:checked::before {
+  display: block;
+}
+
+.login-text {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.login-text::before {
+	content: "1";
+	width: 200px;
+	height: 2px;
+	background-color: white;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+	gap: 25px;
+}
+
+.wrapper a {
+	color: #F8FAFC;
+}
+
+.wrapper div {
+	width: 150px;
+	height: 2px;
+	background-color: white;
 }

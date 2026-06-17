@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>CodeNova</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -90,11 +91,52 @@
         <section class="portfolio" id="portfolio">
             <div class="container">
                 <h2 class="portfolio-title">Наше портфолио</h2>
-                <ul class="portfolio-list">
-                    <li class="portfolio-list-item">Все проекты</li>
-                    <li class="portfolio-list-item">Мобильные</li>
-                    <li class="portfolio-list-item">Веб-разработка</li>
+                <ul class="tabs">
+                    <li><button class="tab-btn active" data-filter="all">Все проекты</button></li>
+                    <li><button class="tab-btn" data-filter="mobile">Мобильные</button></li>
+                    <li><button class="tab-btn" data-filter="web">Веб-разработка</button></li>
                 </ul>
+                <div class="slider-container">
+
+                <button class="arrow-btn prev-btn">&#10094;</button>
+                <div class="slider-track">
+                    <div class="slide active" data-category="web">
+                        <div class="slide-content">
+                            <img src="img/portfolio1.jpg" alt="">
+                            <div class="slide-text">
+                                <p>Коммерческий проект</p>
+                                <p>React, Node.js, Python</p>
+                                <p>Веб-разработка 3 месяца</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-category="web">
+                        <div class="slide-content">
+                            <img src="img/portfolio1.jpg" alt="">
+                            <div class="slide-text">
+                                <p>Коммерческий проект</p>
+                                <p>React, Node.js, Python</p>
+                                <p>Веб-разработка 3 месяца</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide" data-category="web">
+                        <div class="slide-content">
+                            <img src="img/portfolio1.jpg" alt="">
+                            <div class="slide-text">
+                                <p>Коммерческий проект</p>
+                                <p>React, Node.js, Python</p>
+                                <p>Веб-разработка 3 месяца</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="arrow-btn next-btn">&#10095;</button>
+
+            </div>
+
+            <div class="dots-container"></div>
             </div>
         </section>
     </main>
