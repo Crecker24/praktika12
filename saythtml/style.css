@@ -136,7 +136,10 @@ body {
 	color: #F8FAFC;
 }
 
-reg-t
+.reg-text {
+	color: #F8FAFC;
+	z-index: 100;
+}
 
 .reg-form {
 	display: flex;
@@ -522,9 +525,13 @@ reg-t
 
 .profile-header {
 	margin-bottom: 50px;
+	position: relative;
+	z-index: 100;
 }
 
 .profile-header .container {
+	position: relative;
+	z-index: 100;
 	border-bottom: none;
 }
 
@@ -541,6 +548,7 @@ reg-t
 	background-color: rgba(11, 33, 64, 0.8);
 	color: white;
 	margin-bottom: 100px;
+	z-index: 100;
 }
 
 .logout-container {

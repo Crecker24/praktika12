@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // НАДЕЖНЫЙ РЕДИРЕКТ ЧЕРЕЗ JAVASCRIPT
             echo "<script>
                     alert('Вы успешно вошли!');
-                    window.location.href = 'profile.php';
+                    window.location.href = 'index.php';
                   </script>";
             exit; 
         } else {

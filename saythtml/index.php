@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>CodeNova</title>
     <script src="script.js"></script>
 </head>
-<body>
+
+<?php
+session_start(); 
+$user = 'root';
+$password_db = '';
+$db = 'programming product';
+$host = '127.0.0.1';
+$dsn = "mysql:host=".$host.";dbname=".$db;
+
+try {
+    $pdo = new PDO($dsn, $user, $password_db, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+} catch (PDOException $e) {
+    die("Ошибка подключения к базе данных!");
+}
+
+if (!isset($_SESSION['user_phone'])) {
+    header("Location: authorizathion.php");
+    exit;
+}
+
+$phone = $_SESSION['user_phone'];
+$fio = $_POST['fio'];
+$datatime = $_POST['datatime'];
+
+$sql = "SELECT 1 FROM `Клиент` WHERE `Номер_телефона` = :phone LIMIT 1";
+$query = $pdo->prepare($sql);
+$query->execute(['phone' => $phone]);
+$userData = $query->fetch();
+
+
+echo '<body>
     <header class="header">
         <img src="./img/Group 7.svg" alt="" class="top-line">
         <div class="container">
@@ -24,8 +57,13 @@
                 </ul>
             </nav>
             <div class="reg-form">
-                <img src="./img/Generic avatar.png" alt="avatar">
-                <a class="reg-text" href="login.php">Зарегистрироваться</a>
+                <img src="./img/Generic avatar.png" alt="avatar">';
+                if ($userData){
+                    echo '<a class="reg-text" href="login.php" hidden>Зарегистрироваться</a>'; }
+else {
+echo '<a class="reg-text" href="login.php">Зарегистрироваться</a>';
+}
+                echo '
             </div>
         </div>
     </header>
@@ -65,17 +103,16 @@
                     <img src="./img/консультация.jpg" alt="">
                 </div>
                 <div class="consultation-right-side">
-                    <form action="" class="consultation-form">
+                    <form action="" class="consultation-form" method="post">
                         <h4 class="consultation-title">Консультация</h4>
-
-                        <div class="consultation-form-group">
+                        <div class="consultation-form-group" style:"display:none;" >
                             <label for="phone" class="consultation-form-label">Номер телефона</label>
                             <input type="tel" id="phone" name="phone" class="consultation-form-input" placeholder="Ваш номер телефона" required>
-                        </div>
-
+                        </div>'; 
+?>
                         <div class="consultation-form-group">
                             <label for="name" class="consultation-form-label">ФИО</label>
-                            <input type="text" id="name" name="name" class="consultation-form-input" placeholder="Ваше полное имя" required>
+                            <input type="text" id="name" name="fio" class="consultation-form-input" placeholder="Ваше полное имя" required>
                         </div>
 
                         <div class="consultation-form-group">
